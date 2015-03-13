@@ -39,6 +39,9 @@
                                 <state key="normal" title="Update">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="updateBtn:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="pKr-pR-PcL"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rOk-C9-8M1">
                                 <rect key="frame" x="167" y="247" width="90" height="40"/>
@@ -46,6 +49,9 @@
                                 <state key="normal" title="Delete">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="deleteBtn:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="xKr-ui-bP5"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4xe-IY-dL7">
                                 <rect key="frame" x="63" y="199" width="90" height="40"/>
@@ -53,6 +59,9 @@
                                 <state key="normal" title="Create">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="createBtn:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Lnw-OP-gKs"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pYb-FP-BlK">
                                 <rect key="frame" x="167" y="199" width="90" height="40"/>
@@ -60,6 +69,9 @@
                                 <state key="normal" title="Read">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="readBtn:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="fk6-IQ-Qwb"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CfK-9c-6B3">
                                 <rect key="frame" x="63" y="142" width="194" height="30"/>
@@ -69,6 +81,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="firstNameField" destination="Q1v-sW-aZo" id="eEQ-SM-DK0"/>
+                        <outlet property="lastNameField" destination="CfK-9c-6B3" id="9pn-eW-gF5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>

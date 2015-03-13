@@ -10,6 +10,34 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var firstNameField: UITextField!
+    
+    @IBOutlet weak var lastNameField: UITextField!
+    
+    @IBAction func createBtn(sender: UIButton) {
+    
+        
+    
+    }
+    
+    @IBAction func readBtn(sender: UIButton) {
+    
+        
+    
+    }
+    
+    @IBAction func updateBtn(sender: UIButton) {
+    
+        
+    
+    }
+    
+    @IBAction func deleteBtn(sender: UIButton) {
+    
+        
+    
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
