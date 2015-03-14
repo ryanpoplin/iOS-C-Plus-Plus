@@ -32,19 +32,64 @@ class ViewController: UIViewController {
     
     @IBAction func readBtn(sender: UIButton) {
     
+        var managedContext: NSManagedObjectContext = appDelegate.managedObjectContext!
+
+        var request = NSFetchRequest(entityName: "Person")
         
+        request.predicate = NSPredicate(format: "firstName = %@", firstNameField.text)
+        
+        var results = managedContext.executeFetchRequest(request, error: nil)
+        
+        for result in results! {
+            
+            lastNameField.text = result.valueForKey("lastName") as String
+            
+        }
     
     }
     
     @IBAction func updateBtn(sender: UIButton) {
     
+        var managedContext: NSManagedObjectContext = appDelegate.managedObjectContext!
         
+        var request = NSFetchRequest(entityName: "Person")
+        
+        request.predicate = NSPredicate(format: "firstName = %@", firstNameField.text)
+        
+        var results = managedContext.executeFetchRequest(request, error: nil)
+        
+        for result in results! {
+            
+            result.setValue(lastNameField.text, forKey: "lastName")
+        
+        }
+        
+        managedContext.save(nil)
     
     }
     
     @IBAction func deleteBtn(sender: UIButton) {
     
+        var managedContext: NSManagedObjectContext = appDelegate.managedObjectContext!
         
+        var request = NSFetchRequest(entityName: "Person")
+        
+        request.returnsObjectsAsFaults = false
+        
+        request.predicate = NSPredicate(format: "firstName = %@", firstNameField.text)
+        
+        var results = managedContext.executeFetchRequest(request, error: nil)
+        
+        // ...
+        println(results)
+        
+        for result in results! {
+            
+            managedContext.deleteObject(result as NSManagedObject)
+            
+        }
+        
+        managedContext.save(nil)
     
     }
     
