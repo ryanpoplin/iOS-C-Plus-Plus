@@ -19,8 +19,15 @@ class ViewController: UIViewController {
     
     @IBAction func createBtn(sender: UIButton) {
     
-        
+        var managedContext: NSManagedObjectContext = appDelegate.managedObjectContext!
     
+        var newPerson = NSEntityDescription.insertNewObjectForEntityForName("Person", inManagedObjectContext: managedContext) as NSManagedObject
+     
+        newPerson.setValue(firstNameField.text, forKey: "firstName")
+        newPerson.setValue(lastNameField.text, forKey: "lastName")
+        
+        managedContext.save(nil)
+        
     }
     
     @IBAction func readBtn(sender: UIButton) {
