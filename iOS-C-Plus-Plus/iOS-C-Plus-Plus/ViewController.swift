@@ -7,9 +7,12 @@
 //
 
 import UIKit
+import CoreData
 
 class ViewController: UIViewController {
 
+    var appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as AppDelegate
+    
     @IBOutlet weak var firstNameField: UITextField!
     
     @IBOutlet weak var lastNameField: UITextField!
