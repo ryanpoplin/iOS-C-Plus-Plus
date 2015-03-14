@@ -17,6 +17,8 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var lastNameField: UITextField!
     
+    @IBOutlet weak var dataLabel: UILabel!
+    
     @IBAction func createBtn(sender: UIButton) {
     
         var managedContext: NSManagedObjectContext = appDelegate.managedObjectContext!
@@ -27,6 +29,12 @@ class ViewController: UIViewController {
         newPerson.setValue(lastNameField.text, forKey: "lastName")
         
         managedContext.save(nil)
+        
+        var request = NSFetchRequest(entityName: "Person")
+        
+        var results = managedContext.executeFetchRequest(request, error: nil)
+        
+        println(results)
         
     }
     
